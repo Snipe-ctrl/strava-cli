@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "st"
+version = "0.1.0"
+description = "Typer CLI boilerplate"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name="Josh"}]
+dependencies = [
+  "typer[all]>=0.12.5",
+  "rich>=13.7.1"
+]
+
+# Expose `st` as a console script
+[project.scripts]
+st = "st.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "ruff>=0.4",
+  "mypy>=1.10"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/st"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
