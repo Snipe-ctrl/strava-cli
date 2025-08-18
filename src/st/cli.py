@@ -38,3 +38,6 @@ def hello(name: str = typer.Argument("world")) -> None:
 from .commands.shoe import shoe as shoe_cmd
 app.command("shoe")(shoe_cmd)
 
+from .commands.login import login as login_cmd
+app.command("login")(login_cmd)
+
