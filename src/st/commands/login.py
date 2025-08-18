@@ -4,6 +4,6 @@ from ..auth.strava_auth import authenticate_user
 console = Console()
 
 def login() -> None:
-    if not authenticate_user():
-        console.print("Failed to log user in")
+    """Log user into Strava."""
+    authenticate_user()
     console.print("User logged in successfully!")
