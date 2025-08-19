@@ -7,6 +7,6 @@ console = Console()
 
 @require_auth
 def shoe() -> None:
-    """Print total miles on Brooks Ghost shoes."""
+    """Print total miles on Brooks Ghost 15's."""
     total_miles = compute_total_miles()
-    console.print(f"Total miles on shoes: {round(total_miles, 2)}")
+    console.print(f"Total miles on Brooks Ghost shoes: {round(total_miles, 2)}")

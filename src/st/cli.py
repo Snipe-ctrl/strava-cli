@@ -41,3 +41,6 @@ app.command("shoe")(shoe_cmd)
 from .commands.login import login as login_cmd
 app.command("login")(login_cmd)
 
+from .commands.miles import miles as miles_cmd
+app.command("miles")(miles_cmd)
+
